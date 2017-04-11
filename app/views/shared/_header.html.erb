@@ -1,3 +1,11 @@
 <p>I'm a header</p>
 
-<%= link_to "Log Out", :controller => "sessions" ,:action => "destroy" %>
+<% if logged_in? %>
+	<%= link_to "Log Out", :controller => "sessions" , :action => "destroy" %>
+<% end %>
+
+<% if !logged_in? %>
+	<%= link_to "Home", root_path %>
+	<%= link_to "Sign Up", :controller => "users", :action => "new" %>
+	<%= link_to "Log In", :controller => "sessions" , :action => "new" %>
+<% end %>
