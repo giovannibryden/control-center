@@ -1,0 +1,19 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label :email, :class => "title" %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password, :class => "title" %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, 'Confirm', :class => "title" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field submit">
+    <%= f.submit %>
+  </div>
+  
+<% end %>
