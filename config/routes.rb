@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'static/home'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  # root 'topics#index'
+  root 'static#home'
   get 'signup' => 'users#new'
 
   get 'login' => 'sessions#new'
