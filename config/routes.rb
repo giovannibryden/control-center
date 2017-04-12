@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'projects/show'
+
   get 'static/home'
 
   resources :users

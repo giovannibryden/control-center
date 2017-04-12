@@ -13,7 +13,7 @@ include SessionsHelper
   		flash[:success] = "Whoa. It worked!"
   		log_in user
       remember user
-      render 'success'
+      render 'projects/show'
   	else
   		flash[:notice] = "Something's wrong!"
       render 'new'
