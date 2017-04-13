@@ -3,6 +3,9 @@ class SessionsController < ApplicationController
 include SessionsHelper
   
   def new
+    if logged_in?
+      redirect_to "/dashboard"
+    end
   end
 
   def create
@@ -13,7 +16,7 @@ include SessionsHelper
   		flash[:success] = "Whoa. It worked!"
   		log_in user
       remember user
-      render 'projects/show'
+      redirect_to "/dashboard"
   	else
   		flash[:notice] = "Something's wrong!"
       render 'new'

@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'projects/show'
-
-  get 'static/home'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -12,5 +9,6 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
+  get 'dashboard' => 'projects#show'
   
 end
