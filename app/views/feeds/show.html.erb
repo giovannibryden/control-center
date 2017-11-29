@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @feed.source %>
+</p>
+
+<p>
+  <strong>Api key:</strong>
+  <%= @feed.api_key %>
+</p>
+
+<p>
+  <strong>Api secret:</strong>
+  <%= @feed.api_secret %>
+</p>
+
+<p>
+  <strong>Verified:</strong>
+  <%= @feed.verified %>
+</p>
+
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
+<%= link_to 'Back', feeds_path %>
