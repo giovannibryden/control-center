@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
-  get 'dashboard' => 'projects#show'
+  get 'dashboard' => 'feeds#index'
   
 end
