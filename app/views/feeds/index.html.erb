@@ -18,9 +18,15 @@
     <% @feeds.each do |feed| %>
       <tr>
         <td><%= feed.source %></td>
-        <td><%= feed.api_key %></td>
-        <td><%= feed.api_secret %></td>
-        <td><%= feed.verified %></td>
+        <td>****<%= feed.api_key.last(4) %></td>
+        <td>****<%= feed.api_secret.last(4) %></td>
+
+        <% if feed.verified === "f" %>
+         <td><%= "Not verified" %></td>
+        <% else %>
+         <td><%= "Verified" %></td>
+        <% end %>
+  
         <td><%= feed.verified_date %></td>
         <td><%= link_to 'Show', feed %></td>
         <td><%= link_to 'Edit', edit_feed_path(feed) %></td>

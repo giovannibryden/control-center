@@ -17,7 +17,11 @@
 
 <p>
   <strong>Verified:</strong>
-  <%= @feed.verified %>
+  <% if @feed.verified === false %>
+   <%= "Project not verified" %>
+  <% else %>
+   <%= "Verified" %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
