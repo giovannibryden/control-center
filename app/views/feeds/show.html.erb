@@ -7,18 +7,18 @@
 
 <p>
   <strong>Api key:</strong>
-  <%= @feed.api_key %>
+  ****<%= @feed.api_key.last(4) %>
 </p>
 
 <p>
   <strong>Api secret:</strong>
-  <%= @feed.api_secret %>
+  ****<%= @feed.api_secret.last(4) %>
 </p>
 
 <p>
   <strong>Verified:</strong>
-  <% if @feed.verified === false %>
-   <%= "Project not verified" %>
+  <% if @feed.verified === "f" %>
+   <%= "Not verified" %>
   <% else %>
    <%= "Verified" %>
   <% end %>
