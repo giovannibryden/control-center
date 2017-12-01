@@ -24,5 +24,12 @@
   <% end %>
 </p>
 
+<div class="feed response">
+  This is where the response from my feed will go:<br><br>
+  <%= verify(@feed.api_secret) %>
+</div>
+
+<p></p>
+
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
 <%= link_to 'Back', feeds_path %>

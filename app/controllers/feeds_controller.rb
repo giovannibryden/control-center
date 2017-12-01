@@ -10,6 +10,7 @@ class FeedsController < ApplicationController
   # GET /feeds/1
   # GET /feeds/1.json
   def show
+    @feed = Feed.find(params[:id])
   end
 
   # GET /feeds/new
@@ -59,11 +60,6 @@ class FeedsController < ApplicationController
       format.html { redirect_to feeds_url, notice: 'Feed was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def verify
-    api_secret = @feed.api_secret
-    flash.now[:notice] = api_secret + "is your secret."
   end
 
   private

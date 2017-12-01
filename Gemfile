@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Pretty print rails console
 gem 'hirb'
+
+# Aid in exporting Mixpanel data
+gem 'mixpanel_client'
